@@ -1,0 +1,6 @@
+﻿cl : Command line warning D9002: ignoring unknown option '-mwindows'
+  Skipping... (no relevant changes detected)
+  TastenRekorder.cpp
+  stdafx.cpp
+  TastenRekorder.vcxproj -> C:\Users\ali-d\Desktop\Programming\TastenRekorder\Debug\TastenRekorder.exe
+  TastenRekorder.vcxproj -> C:\Users\ali-d\Desktop\Programming\TastenRekorder\Debug\TastenRekorder.pdb (Partial PDB)
