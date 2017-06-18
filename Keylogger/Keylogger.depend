@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1497769835 source:c:\users\ali-d\desktop\programming\tastenrekorder\keylogger\main.cpp
+	<iostream>
+	<windows.h>
+
