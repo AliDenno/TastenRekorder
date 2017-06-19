@@ -9,9 +9,8 @@ class KeyPair
 {
 	public:
 		KeyPair(const string &vk = "", const string &name = "") : VKName(vk), Name(name) {}
-
-	string VKName;
-	string Name;
+		string VKName;
+		string Name;
 };
 class Keys {
 	public:
