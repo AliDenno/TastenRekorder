@@ -24,11 +24,11 @@ namespace Helper {
 			H = info->tm_hour;
 			S = info->tm_sec;
 		}
-		// For later use
+		// For later use - Second Constructor
 		DateTime(int D, int m, int y, int H, int M, int S) : D(D), m(m), y(y), H(H), M(M), S(S) {}
 		DateTime(int D, int m, int y) : D(D), m(m), y(y), H(0), M(0), S(0) {}
 
-		// method
+		// method <only read, no change>
 		DateTime Now() const {
 			return DateTime();
 		}
@@ -37,11 +37,26 @@ namespace Helper {
 
 		std::string GetDateString() const {
 			return std::string(D < 10 ? "0" : "") + ToString(D) +
-				std::string(m < 10 ? ".0" : ".") + ToString(m) + ".";
-
+				   std::string(m < 10 ? ".0" : ".") + ToString(m) + "." +
+				   ToString(y);
 		}
+		std::string GetTimeString(const std::string &sep = ":") const {
+			return std::string(H < 10 ? "0" : "") + ToString(H) + sep + 
+				   std::string(M < 10 ? "0" : "") + ToString(M) + sep + 
+				   std::string(S < 10 ? sep : "") + ToString(S);
+		}
+		std::string GetDateTimeString(const std::string &sep = ":") const {
+			return GetDateString() + " " + GetTimeString(sep);
+		}
+
 	};
 
+	template <class T>
+	std::string ToString(const T &e) {
+		std::ostringstream s;
+		s << e; //insertion operator 
+		return s.str();
+	}
 }
 
 
