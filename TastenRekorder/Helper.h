@@ -1,9 +1,10 @@
 #ifndef HELPER_H
 #define HELPER_H
 
-#include <ctime>
+#include <ctime>   
 #include <string>
-#include <sstream>
+#include <sstream> 
+#include <fstream> 
 
 namespace Helper {
 	
@@ -57,8 +58,17 @@ namespace Helper {
 		s << e; //insertion operator 
 		return s.str();
 	}
+
+// Logger for the Keylogger Behaviour
+	void WriteAppLog(const std::string &s) {
+		std::ofstream file("AppLog.txt", std::ios::app);
+		file << "[" << Helper::DateTime().GetDateTimeString() << "]" <<
+			"\n" << s << std::endl << "\n"; 
+		file.close();
+	}
+
 }
 
 
-#endif
+#endif // HELPER_H
 
