@@ -4,6 +4,9 @@
 #include "stdafx.h"
 #include <windows.h>
 #include <iostream>
+#include "Helper.h"
+#include "Base64.h"
+#include "KeyConstants.h"  
 
 using namespace std;
 

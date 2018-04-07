@@ -1,6 +1,8 @@
 ﻿cl : Command line warning D9002: ignoring unknown option '-mwindows'
-  Skipping... (no relevant changes detected)
-  TastenRekorder.cpp
   stdafx.cpp
+  TastenRekorder.cpp
+c:\users\ali-d\desktop\programming\tastenrekorder\tastenrekorder\helper.h(19): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\time.h(505): note: see declaration of 'localtime'
+  Generating Code...
+c:\users\ali-d\desktop\programming\tastenrekorder\tastenrekorder\base64.h(51): warning C4715: 'BASE64::base64_encode': not all control paths return a value
   TastenRekorder.vcxproj -> C:\Users\ali-d\Desktop\Programming\TastenRekorder\Debug\TastenRekorder.exe
-  TastenRekorder.vcxproj -> C:\Users\ali-d\Desktop\Programming\TastenRekorder\Debug\TastenRekorder.pdb (Partial PDB)

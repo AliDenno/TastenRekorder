@@ -29,20 +29,20 @@ namespace BASE64 {
 	std::string base64_encode(const std::string &s) {
 		std::string ret;//output string
 		int val = 0;
-		int bits = -6; // Group of 6
-		const unsigned int b63 = 0x3F; //always positive
-		for (const auto &c : s) {
-			val = (val << 8) + c;//left binary shifting <shift left by 8 places> equalt to val = val * 2 ^ 8
+		int bits = -6; // Group of 6 (6 sub groups)
+		const unsigned int b63 = 0x3F; // hexa decimal - always positive
+		for (const auto &c : s) { // Auto for not knowing the type 
+			val = (val << 8) + c; //left binary shifting <shift left by 8 places> equalt to val = val * 2 ^ 8
 			bits += 8;
 			while (bits >= 0) {
-				ret.push_back(BASE64_CODES[(val >> bits)& b63]);
+				ret.push_back(BASE64_CODES[(val >> bits)& b63]); // Right shifting then binary Add 
 				bits -= 6;
 			}
 		}
-		if (bits > -6) {
+		if (bits > -6) { // at least one is inserted 
 			ret.push_back(BASE64_CODES[((val << 8) >> (bits + 8))&b63]);
 			
-			while (ret.size() % 4) {
+			while (ret.size() % 4) { // greater than zero true else false (no modules) 
 				ret.push_back('=');
 
 				return ret;
